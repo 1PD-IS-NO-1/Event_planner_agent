@@ -13,3 +13,4 @@ lanchain-community
 -D @tailwindcss/typography
 Markdown 
 markupsafe
+gunicorn
