@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Create Your Event{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Background Image -->
+<div class="hero-section mb-12 flex items-center justify-center">
+    <div class="text-center text-white">
+        <h1 class="text-4xl font-bold mb-4">Plan Your Perfect Event</h1>
+        <p class="text-xl">Let Agent help you create an unforgettable experience</p>
+    </div>
+</div>
+
+<div class="max-w-4xl mx-auto">
+    <!-- Service Icons -->
+    <div class="grid grid-cols-3 gap-4 mb-12">
+        <div class="text-center p-4">
+            <div class="venue-icon mx-auto mb-2"></div>
+            <h3 class="font-semibold">Venue Selection</h3>
+        </div>
+        <div class="text-center p-4">
+            <div class="logistics-icon mx-auto mb-2"></div>
+            <h3 class="font-semibold">Logistics Planning</h3>
+        </div>
+        <div class="text-center p-4">
+            <div class="marketing-icon mx-auto mb-2"></div>
+            <h3 class="font-semibold">Marketing Strategy</h3>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-xl p-8">
+        <form action="{{ url_for('plan_event') }}" method="POST" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Event Name</label>
+                    <input type="text" name="event_topic" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Event City</label>
+                    <input type="text" name="event_city" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Date</label>
+                    <input type="date" name="tentative_date" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Expected Participants</label>
+                    <input type="number" name="expected_participants" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Budget ($)</label>
+                    <input type="number" name="budget" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Venue Type</label>
+                    <select name="venue_type" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <option value="Conference Hall">Conference Hall</option>
+                        <option value="Banquet Hall">Banquet Hall</option>
+                        <option value="Outdoor Venue">Outdoor Venue</option>
+                        <option value="Hotel">Hotel</option>
+                        <option value="Restaurant">Restaurant</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Event Description</label>
+                <textarea name="event_description" rows="4" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+            </div>
+
+            <div class="text-center">
+                <button type="submit"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Generate Event Plan
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

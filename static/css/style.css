@@ -1,0 +1,72 @@
+/* Custom styles */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+.venue-icon {
+    background-image: url('../images/venue-icon.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+.logistics-icon {
+    background-image: url('../images/logistics-icon.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+.marketing-icon {
+    background-image: url('../images/marketing-icon.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+/* Form styles */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Card hover effects */
+.result-card {
+    transition: transform 0.2s;
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Loading animation */
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    .print-break-inside {
+        break-inside: avoid;
+    }
+}
