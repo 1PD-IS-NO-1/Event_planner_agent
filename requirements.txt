@@ -13,3 +13,5 @@ lanchain-community
 Markdown 
 markupsafe
 gunicorn
+google-search-results
+serpapi

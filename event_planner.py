@@ -41,9 +41,15 @@ class GraphState(TypedDict):
     logistics_result: Dict[str, Any]
     marketing_result: Dict[str, Any]
 
-# Set up environment variables
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCF-jMEoZr2ji5kmJvYg4HQGWG--Bq8n84"
-os.environ["SERPAPI_API_KEY"] = "570ad04ec98b63d10b8a46022d0a3b91e63f39fe943df842cfd56dadc5db4274"
+from dotenv import load_dotenv  
+import os  
+
+# Load environment variables from .env file  
+load_dotenv()  
+
+# Access the environment variables  
+google_api_key = os.getenv("GOOGLE_API_KEY")  
+serpapi_api_key = os.getenv("SERPAPI_API_KEY")  
 
 # Initialize Gemini model with temperature
 llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.7)
