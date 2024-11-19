@@ -12,3 +12,6 @@
 ## You wil see this kink of this UI
 
 ![first UI OF envent planner by priyanshu dhaked](image.png)
+
+# Use of Event planner 
+![image](https://github.com/user-attachments/assets/b4ebb98c-2aec-426d-a5c2-6755a0aee6b6)
