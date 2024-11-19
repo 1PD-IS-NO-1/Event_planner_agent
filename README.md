@@ -15,3 +15,9 @@
 
 # Use of Event planner 
 ![image](https://github.com/user-attachments/assets/b4ebb98c-2aec-426d-a5c2-6755a0aee6b6)
+## Venue plan
+![image](https://github.com/user-attachments/assets/bcea3d72-cee7-41f5-86ce-1b756a50edd9)
+## Logistics plan
+![image](https://github.com/user-attachments/assets/80e55845-8076-452e-abec-d2878d15bfd3)
+## Marketing plan
+![image](https://github.com/user-attachments/assets/ab98965d-8688-4092-923c-47095a013f7f)
